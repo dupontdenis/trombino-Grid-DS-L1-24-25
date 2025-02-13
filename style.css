@@ -1,0 +1,134 @@
+/* Import Google Font */
+
+/* Apply the font to the entire body */
+body {
+  font-size: 1.5em;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: Raleway, HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222
+}
+
+/* Define the main grid container */
+body {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "footer footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 6fr;
+
+}
+
+/* Style for the header */
+header {
+  grid-area: header;
+  background-color: #f8f9fa;
+  padding: 2rem;
+}
+
+/* Style for the navigation */
+nav {
+  grid-area: nav;
+  background-color: #666;
+  color: #fff;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin-bottom: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Style for the main content */
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Style for each section inside main */
+section {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  position: relative;
+}
+
+section>h2 {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+/* Style for each student */
+.student {
+  display: grid;
+  /* grid-template-rows: repeat(3, auto); */
+  gap: 0.5rem;
+  border: 1px solid #343a40;
+  padding: 1rem;
+  border-radius: 8px;
+
+}
+
+.student img:nth-child(2) {
+  grid-row: 1;
+}
+
+.student img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* 
+.student:hover * {
+  background-color: #1bce4b !important;
+}
+
+
+.info:hover * {
+  background-color: rgb(72, 72, 192);
+  color: white;
+}
+
+.droit:hover * {
+  background-color: rgb(192, 72, 162);
+  color: white;
+}
+
+.bio:hover * {
+  background-color: rgb(72, 190, 192);
+  color: white;
+}
+
+:is(.info:hover, .droit:hover, .bio:hover)>h2 {
+  position: absolute;
+  left: -100px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+
+}  */
+
+
+/* Style for the footer */
+footer {
+  grid-area: footer;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: center;
+}
